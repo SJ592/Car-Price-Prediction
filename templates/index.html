@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction App</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" />
+</head>
+
+<body>
+
+    <div>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <h2>Predict Selling Price Of Your Car</h2>
+            <div class="row">
+                <div class = "column1">
+                    <h3>Year</h3>
+                    <input id="first" name="Year" type="number ">
+                    <h3>What is the Showroom Price?(In lakhs)</h3><br><input id="second" name="Present_Price" required="required">
+                    <h3>How many kilometers drived?</h3><input id="third" name="Kms_Driven" required="required">
+                    <h3>How many owners previously had the car(0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
+                </div>
+
+                <div class = "column2">
+                    <h3>What is the Fuel type?</h3><br><select name="Fuel_Type" id="fuel" required="required">
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="CNG">CNG</option>
+                    </select>
+                    <h3>Are you a Dealer or Individual ?</h3><br><select name="Seller_Type" id="seller" required="required">
+                        <option value="Dealer">Dealer</option>
+                        <option value="Individual">Individual</option>
+                    </select>
+                    <h3>Transmission type ?</h3><br><select name="Transmission" id="research" required="required">
+                        <option value="Mannual">Manual Car</option>
+                        <option value="Automatic">Automatic Car</option>
+                    </select>
+                </div>
+            </div>
+            <br><br><button id="sub" type="submit ">Calculate Selling Price !</button>
+
+        </form>
+
+        <br><h3 id = "prediction">{{ prediction_text }}</h3>
+    </div>
+</body>
+</html>
