@@ -1,0 +1,48 @@
+body{
+	background-image: url('cars.jpg');
+	background-size: cover;
+	background-color: white;
+	text-align: center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 18px;
+}
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#prediction{
+	color: navy;
+	font-size: 25px;
+	background-color: white;
+	border-radius: 10px;
+	border-color: black;
+}
+
+input, select{
+  /*box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;*/
+	border-radius: 10px;
+  	height: 25px;
+  	width: 300px;
+    font-size: 18px;
+    text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+#sub {
+    width: 330px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background-color: orange;
+    border-color: white;
+}
